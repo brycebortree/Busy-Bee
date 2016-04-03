@@ -28,7 +28,7 @@ body {
 
 #opt1, #opt2, #opt3 {
   max-width: 30%;
-  height: 200px;
+  min-height: 300px;
 
 }
 
