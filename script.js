@@ -2,8 +2,8 @@ $(document).ready(function(){
 console.log('locked/loaded');
 
   var roundCount = 0;
-
   var dispImages = [];
+  var score = 0;
 
   // image array
   var yImages = [ 
@@ -33,7 +33,7 @@ console.log('locked/loaded');
 
   $('#startGame').on('click', function(){
     console.log("game started");
-    GenerateBoard();
+    GenerateBoard(2);
     dispImages = [];
     //IF winner
     //else
@@ -43,10 +43,9 @@ console.log('locked/loaded');
   });
 
 
-  // $('#images-row').hide();
 
 // GENERATE BOARD function
-// Built myself
+// Built myself -> hence every single console.log available to man
 var GenerateBoard = function(num){
   var opt1 = $('#opt1');
   var opt2 = $('#opt2');
@@ -57,6 +56,7 @@ var GenerateBoard = function(num){
   dispImages.push(shuffledY[0]);
   dispImages.push(shuffledY[1]);
   var shuffledN = shuffle(nImages);
+  $(shuffledN[0]).addClass('beeDislike');$
   dispImages.push(shuffledN[0]);
   console.log(shuffledN);
   shuffle(dispImages);
@@ -81,12 +81,28 @@ function shuffle(array) {
   return array;
 }
 
+//WINNER function, stolen from Taylor's Know Your Planet
+  $('.response').on('click', function(e){
+      e.preventDefault();
+      console.log('clicked image');
+      if ($(this).hasClass("beeDislike")) {
+      score++; 
+        if (score >=7 ) {
+          alert('you did it! Next round');
+          play();
+
+        }else{
+
+          alert('Not quite!');
+          }
+        }
+
+
+    });
+  
 
 // //GENERATE BIG function
 // var GenerateBig = function() {}
-
-// //WINNER function
-// var winner = function(){}
 
 // //DISPLAY WINNER function (sweet alert?)
 // //prompt GENERATE BIG function
