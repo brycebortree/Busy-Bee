@@ -46,20 +46,24 @@ console.log('locked/loaded');
   // $('#images-row').hide();
 
 // GENERATE BOARD function
-// Stolen from 
+// Built myself
 var GenerateBoard = function(num){
   var opt1 = $('#opt1');
+  var opt2 = $('#opt2');
+  var opt3 = $('#opt3')
   roundCount++;
   var shuffledY = shuffle(yImages);
+  // console.log(shuffledY);
+  dispImages.push(shuffledY[0]);
+  dispImages.push(shuffledY[1]);
   var shuffledN = shuffle(nImages);
-  console.log(shuffledY);
-  console.log(shuffledN);
-
-  // opt1.css({'background-image':'url('+dispImages[num].photo+')'});
-  // opt1.css({'background-image':'url('+dispImages[num].photo+')'});
-  // opt1.css({'background-image':'url('+dispImages[num].photo+')'});
-
-
+  dispImages.push(shuffledN[0]);
+  // console.log(shuffledN);
+  shuffle(dispImages);
+  // console.log(dispImages);
+  opt1.css({'background-image':'url('+dispImages[0].photo+')'});
+  opt1.css({'background-image':'url('+dispImages[1].photo+')'});
+  opt1.css({'background-image':'url('+dispImages[2].photo+')'});
 };
 
 //per Auggie, Fisher-Yates shuffle function
