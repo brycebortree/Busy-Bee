@@ -26,7 +26,7 @@ console.log('locked/loaded');
     $(this).parent().fadeOut();
   });
 
-  //optional learn more page
+  //optional learn more page that I want so bad :(
   // $('#learn').on('click', function(){
   //   console.log('learn more');
   // });
@@ -50,12 +50,14 @@ console.log('locked/loaded');
 var GenerateBoard = function(num){
   var opt1 = $('#opt1');
   roundCount++;
-  shuffle(yImages).push(dispImages);
-  shuffle(nImages).push(dispImages);
+  var shuffledY = shuffle(yImages);
+  var shuffledN = shuffle(nImages);
+  console.log(shuffledY);
+  console.log(shuffledN);
 
-  opt1.css({'background-image':'url('+dispImages[num].photo+')'});
-  opt1.css({'background-image':'url('+dispImages[num].photo+')'});
-  opt1.css({'background-image':'url('+dispImages[num].photo+')'});
+  // opt1.css({'background-image':'url('+dispImages[num].photo+')'});
+  // opt1.css({'background-image':'url('+dispImages[num].photo+')'});
+  // opt1.css({'background-image':'url('+dispImages[num].photo+')'});
 
 
 };
