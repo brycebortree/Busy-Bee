@@ -1,0 +1,37 @@
+body {
+  text-align: center;
+}
+
+.script-font {
+  font-family: 'Chonburi', cursive;
+  text-align: center;
+  font-color: black;
+  color: white;
+}
+
+/*this is to make the buttons vertically centered*/
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+/*this is for vertically centering buttons on small screens*/
+@media (max-width: 768px) {
+  .vertical-center:before {
+    height: auto;
+    /* Or */
+    display: none;
+  }
+}
+
+/*pretty background*//*CURRENTLY NOT WORKING NICE*/
+body { 
+  background: url('images/bg.jpeg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
