@@ -44,8 +44,8 @@ var GenerateBoard = function(num){
   dispImages.push(shuffledY[0]);
   dispImages.push(shuffledY[1]);
   var shuffledN = shuffle(nImages);
-  dispImages.push(shuffledN[0]);
   console.log(shuffledN);
+  dispImages.push(shuffledN[0]);
   shuffle(dispImages);
   console.log(dispImages);
   opt1.css({'background-image':'url('+dispImages[0].photo+')'});
@@ -82,13 +82,17 @@ function shuffle(array) {
   $('.response').on('click', function(e){
       e.preventDefault();
       console.log('clicked image');
-      if ( $(this).hasClass(false)) {
+      if($(this).hasClass(false)) {
       console.log('clicked correct image');
       score++; 
+      console.log(score);
+      dispImages = [];
       GenerateBoard();
+      winner();
         } 
         else {
           alert('Not quite!');
+          dispImages = [];
           GenerateBoard();
           }
         });
@@ -101,7 +105,6 @@ if (score >=7 ) {
   } else {
     return;
   }
-
 }
 
 //optional learn more page that I want so bad :( tbc
@@ -114,7 +117,5 @@ if (score >=7 ) {
 
 // //DISPLAY WINNER function (sweet alert?)
 // //prompt GENERATE BIG function
-var displayWinner = function() {}
 
-  });
 
