@@ -49,11 +49,11 @@ var GenerateBoard = function(num){
   shuffle(dispImages);
   console.log(dispImages);
   opt1.css({'background-image':'url('+dispImages[0].photo+')'});
-  opt1.removeClass('true false').addClass('{'+dispImages[0].beeLike+'}');
+  opt1.removeClass('true false').addClass(''+dispImages[0].beeLike+'');
   opt2.css({'background-image':'url('+dispImages[1].photo+')'});
-  opt2.removeClass('true false').addClass('('+dispImages[1].beeLike+')');
+  opt2.removeClass('true false').addClass(''+dispImages[1].beeLike+'');
   opt3.css({'background-image':'url('+dispImages[2].photo+')'});
-  opt3.removeClass('true false').addClass('('+dispImages[2].beeLike+')');
+  opt3.removeClass('true false').addClass(''+dispImages[2].beeLike+'');
 
 };
 // .addClass dispImage[0].beeLike
@@ -82,14 +82,15 @@ function shuffle(array) {
   $('.response').on('click', function(e){
       e.preventDefault();
       console.log('clicked image');
-      if ( $(this).beeLike === (false) ) {
+      if ( $(this).hasClass(false)) {
       console.log('clicked correct image');
       score++; 
       GenerateBoard();
         } 
-        // else {
-        //   alert('Not quite!');
-        //   }
+        else {
+          alert('Not quite!');
+          GenerateBoard();
+          }
         });
 
 
