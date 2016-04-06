@@ -6,39 +6,66 @@ console.log('locked/loaded');
   var score1 = 0;
   var score2 = 0;
 
+
+
   // image arrays
+  var blImages = [ 
+    {desc: 'Apple Tree', photo: 'images/y-apple.jpg', correct: false},
+    {desc: 'Basil', photo: 'images/y-basil.jpg', correct: false},
+    {desc: 'Black Eyed Susans', photo: 'images/y-blackeyed-susans.jpg', correct: false},
+    {desc: 'Cherry', photo: 'images/y-cherry.jpg',correct: false},
+    {desc: 'Clematis', photo: 'images/y-clematis.jpg', correct: false},
+    {desc: 'Dahlias', photo: 'images/y-dahlias.jpg', correct: false},
+    {desc: 'Foxglove', photo: 'images/y-foxglove.jpg', correct: false},
+    {desc: 'Hollyhocks', photo: 'images/y-hollyhocks.jpg', correct: false},
+    {desc: 'Honeysuckle', photo: 'images/y-honeysuckle.jpg', correct: false},
+    {desc: 'Hyacinth', photo: 'images/y-hyacinth.jpg', correct: false},
+    {desc: 'Hyssop', photo: 'images/y-hyssop.jpg', correct: false},
+    {desc: 'Lavendar', photo: 'images/y-lavendar.jpg', correct: false},
+    {desc: 'Lilac', photo: 'images/y-lilac.jpg', correct: false},
+    {desc: 'Rosemary', photo: 'images/y-rosemary.jpg', correct: false},
+    {desc: 'Snapdragon', photo: 'images/y-snapdragon.jpg', correct: false},
+    {desc: 'Snapdragon', photo: 'images/y-snapdragons.jpg', correct: false}];
+
+  var bcImages = [ 
+    {desc: 'Benedict Cumberbatch', photo: 'images/y-apple.jpg', correct: true},
+    {desc: 'Benedict Cumberbatch', photo: 'images/y-basil.jpg', correct: true},
+    {desc: 'Benedict Cumberbatch', photo: 'images/y-blackeyed-susans.jpg', correct: true},
+    {desc: 'Benedict Cumberbatch', photo: 'images/y-cherry.jpg',correct: true},
+    {desc: 'Benedict Cumberbatch', photo: 'images/y-clematis.jpg', correct: true}];
+
   var yImages = [ 
-    {desc: 'Apple Tree', photo: 'images/y-apple.jpg', beeLike: true},
-    {desc: 'Basil', photo: 'images/y-basil.jpg', beeLike: true},
-    {desc: 'Black Eyed Susans', photo: 'images/y-blackeyed-susans.jpg', beeLike: true},
-    {desc: 'Cherry', photo: 'images/y-cherry.jpg', beeLike: true},
-    {desc: 'Clematis', photo: 'images/y-clematis.jpg', beeLike: true},
-    {desc: 'Dahlias', photo: 'images/y-dahlias.jpg', beeLike: true},
-    {desc: 'Foxglove', photo: 'images/y-foxglove.jpg', beeLike: true},
-    {desc: 'Hollyhocks', photo: 'images/y-hollyhocks.jpg', beeLike: true},
-    {desc: 'Honeysuckle', photo: 'images/y-honeysuckle.jpg', beeLike: true},
-    {desc: 'Hyacinth', photo: 'images/y-hyacinth.jpg', beeLike: true},
-    {desc: 'Hyssop', photo: 'images/y-hyssop.jpg', beeLike: true},
-    {desc: 'Lavendar', photo: 'images/y-lavendar.jpg', beeLike: true},
-    {desc: 'Lilac', photo: 'images/y-lilac.jpg', beeLike: true},
-    {desc: 'Rosemary', photo: 'images/y-rosemary.jpg', beeLike: true},
-    {desc: 'Snapdragon', photo: 'images/y-snapdragon.jpg', beeLike: true},
-    {desc: 'Snapdragon', photo: 'images/y-snapdragons.jpg', beeLike: true}];
+    {desc: 'Apple Tree', photo: 'images/y-apple.jpg', correct: false},
+    {desc: 'Basil', photo: 'images/y-basil.jpg', correct: false},
+    {desc: 'Black Eyed Susans', photo: 'images/y-blackeyed-susans.jpg', correct: false},
+    {desc: 'Cherry', photo: 'images/y-cherry.jpg',correct: false},
+    {desc: 'Clematis', photo: 'images/y-clematis.jpg', correct: false},
+    {desc: 'Dahlias', photo: 'images/y-dahlias.jpg', correct: false},
+    {desc: 'Foxglove', photo: 'images/y-foxglove.jpg', correct: false},
+    {desc: 'Hollyhocks', photo: 'images/y-hollyhocks.jpg', correct: false},
+    {desc: 'Honeysuckle', photo: 'images/y-honeysuckle.jpg', correct: false},
+    {desc: 'Hyacinth', photo: 'images/y-hyacinth.jpg', correct: false},
+    {desc: 'Hyssop', photo: 'images/y-hyssop.jpg', correct: false},
+    {desc: 'Lavendar', photo: 'images/y-lavendar.jpg', correct: false},
+    {desc: 'Lilac', photo: 'images/y-lilac.jpg', correct: false},
+    {desc: 'Rosemary', photo: 'images/y-rosemary.jpg', correct: false},
+    {desc: 'Snapdragon', photo: 'images/y-snapdragon.jpg', correct: false},
+    {desc: 'Snapdragon', photo: 'images/y-snapdragons.jpg', correct: false}];
 
   var nImages = [
-    {desc: 'Azaleas', photo: 'images/n-azaleas.jpg', beeLike: false},
-    {desc: 'Drosera Rotundifolia', photo: 'images/n-drosera-rotundifolia.jpg', beeLike: false},
-    {desc: 'Feverfew', photo: 'images/n-feverfew.jpg', beeLike: false},
-    {desc: 'Heliconia', photo: 'images/n-heliconia.jpg', beeLike: false},
-    {desc: 'Mountain Laurel', photo: 'images/n-mountain-laurel.jpg', beeLike: false},
-    {desc: 'Oleander', photo: 'images/n-oleander.jpg', beeLike: false},
-    {desc: 'Pitcher Plant', photo: 'images/n-pitcher-plant.jpg', beeLike: false},
-    {desc: 'Pitcher Plant', photo: 'images/n-pitcher-plant2.jpg', beeLike: false},
-    {desc: 'Red Rosettes', photo: 'images/n-red-rosettes.jpg', beeLike: false},
-    {desc: 'Rhododendron', photo: 'images/n-rhododendron.jpg', beeLike: false},
-    {desc: 'Stargazer Lily', photo: 'images/n-stargazer-lily.jpg', beeLike: false},
-    {desc: 'Trumpet Flower', photo: 'images/n-trumpet-flower.jpg', beeLike: false},
-    {desc: 'Wormwood', photo: 'images/n-wormwood.jpg', beeLike: false}];
+    {desc: 'Azaleas', photo: 'images/n-azaleas.jpg', correct: true},
+    {desc: 'Drosera Rotundifolia', photo: 'images/n-drosera-rotundifolia.jpg', correct: true},
+    {desc: 'Feverfew', photo: 'images/n-feverfew.jpg', correct: true},
+    {desc: 'Heliconia', photo: 'images/n-heliconia.jpg', correct: true},
+    {desc: 'Mountain Laurel', photo: 'images/n-mountain-laurel.jpg', correct: true},
+    {desc: 'Oleander', photo: 'images/n-oleander.jpg', correct: true},
+    {desc: 'Pitcher Plant', photo: 'images/n-pitcher-plant.jpg', correct: true},
+    {desc: 'Pitcher Plant', photo: 'images/n-pitcher-plant2.jpg', correct: true},
+    {desc: 'Red Rosettes', photo: 'images/n-red-rosettes.jpg', correct: true},
+    {desc: 'Rhododendron', photo: 'images/n-rhododendron.jpg', correct: true},
+    {desc: 'Stargazer Lily', photo: 'images/n-stargazer-lily.jpg', correct: true},
+    {desc: 'Trumpet Flower', photo: 'images/n-trumpet-flower.jpg', correct: true},
+    {desc: 'Wormwood', photo: 'images/n-wormwood.jpg', correct: true}];
 
   $('.fader').on('click', function(){
     $(this).parent().fadeOut();
@@ -47,14 +74,14 @@ console.log('locked/loaded');
 
   $('#startGame').on('click', function(){
     console.log("game started");
-    GenerateBoard();
+    GenerateBeeBoard();
     dispImages = [];
     //GENERATE BOARD function while WINNER <7
   });
 
 // GENERATE BOARD function
 // Built myself -> hence every single console.log available to man
-var GenerateBoard = function(){
+var GenerateBeeBoard = function(){
   var opt1 = $('#opt1');
   var opt2 = $('#opt2');
   var opt3 = $('#opt3');
@@ -69,15 +96,15 @@ var GenerateBoard = function(){
   shuffle(dispImages);
   // console.log(dispImages);
   opt1.css({'background-image':'url('+dispImages[0].photo+')'});
-  opt1.removeClass('true false').addClass(''+dispImages[0].beeLike+'');
+  opt1.removeClass('true false').addClass(''+dispImages[0].correct+'');
   opt1Words=document.getElementById("opt1-desc");
   opt1Words.innerHTML=''+dispImages[0].desc+'';
   opt2.css({'background-image':'url('+dispImages[1].photo+')'});
-  opt2.removeClass('true false').addClass(''+dispImages[1].beeLike+'');
+  opt2.removeClass('true false').addClass(''+dispImages[1].correct+'');
   opt2Words=document.getElementById("opt2-desc");
   opt2Words.innerHTML=''+dispImages[1].desc+'';
   opt3.css({'background-image':'url('+dispImages[2].photo+')'});
-  opt3.removeClass('true false').addClass(''+dispImages[2].beeLike+'');
+  opt3.removeClass('true false').addClass(''+dispImages[2].correct+'');
   opt3Words=document.getElementById("opt3-desc");
   opt3Words.innerHTML=''+dispImages[2].desc+'';
 };
@@ -105,7 +132,7 @@ function shuffle(array) {
   $('.response').on('click', function(e){
       e.preventDefault();
       console.log('clicked image');
-      if ($(this).hasClass('false')){
+      if ($(this).hasClass('true')){
       console.log('clicked correct image');
         if(roundCount % 2 === 1) {
           score1++;
