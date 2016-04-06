@@ -3,7 +3,8 @@ console.log('locked/loaded');
 
   var roundCount = 0;
   var dispImages = [];
-  var score = 0;
+  var score1 = 0;
+  var score2 = 0;
 
   // image arrays
   var yImages = [ 
@@ -37,7 +38,7 @@ console.log('locked/loaded');
     {desc: 'Rhododendron', photo: 'images/n-rhododendron.jpg', beeLike: false},
     {desc: 'Stargazer Lily', photo: 'images/n-stargazer-lily.jpg', beeLike: false},
     {desc: 'Trumpet Flower', photo: 'images/n-trumpet-flower.jpg', beeLike: false},
-    {desc: 'Wormwood', photo: 'images/n-wormwood.png', beeLike: false}];
+    {desc: 'Wormwood', photo: 'images/n-wormwood.jpg', beeLike: false}];
 
   $('.fader').on('click', function(){
     $(this).parent().fadeOut();
@@ -59,14 +60,14 @@ var GenerateBoard = function(num){
   var opt3 = $('#opt3');
   roundCount++;
   var shuffledY = shuffle(yImages);
-  console.log(shuffledY);
+  // console.log(shuffledY);
   dispImages.push(shuffledY[0]);
   dispImages.push(shuffledY[1]);
   var shuffledN = shuffle(nImages);
   dispImages.push(shuffledN[0]);
-  console.log(shuffledN);
+  // console.log(shuffledN);
   shuffle(dispImages);
-  console.log(dispImages);
+  // console.log(dispImages);
   opt1.css({'background-image':'url('+dispImages[0].photo+')'});
   opt1.removeClass('true false').addClass(''+dispImages[0].beeLike+'');
   opt1Words=document.getElementById("opt1-desc");
@@ -80,7 +81,6 @@ var GenerateBoard = function(num){
   opt3Words=document.getElementById("opt3-desc");
   opt3Words.innerHTML=''+dispImages[2].desc+'';
 };
-// .addClass dispImage[0].beeLike
 
 //per Auggie, Fisher-Yates shuffle function
 function shuffle(array) {
@@ -97,47 +97,81 @@ function shuffle(array) {
   return array;
 }
 
+//switch player function
+
+
+
 //Score function, stolen from Taylor's Know Your Planet
   $('.response').on('click', function(e){
       e.preventDefault();
       console.log('clicked image');
+      
       if ($(this).hasClass('false')){
       console.log('clicked correct image');
-      score++;
-      d=document.getElementById("scoreDisp");
-      d.innerHTML='Score is ' + score + '!';
-
-      winner();
-      dispImages = [];
-      GenerateBoard();
-        } 
+      
+        if(roundCount % 2 === 1) {
+          score1++;
+          d=document.getElementById("p1score");
+          d.innerHTML="Player 1's score is " + score1 + "!";
+          winner();
+          dispImages = [];
+          GenerateBoard();
+        } else {
+          score2++;
+          d=document.getElementById("p2score");
+          d.innerHTML="Player 2's score is " + score2 + "!";
+          winner();
+          dispImages = [];
+          GenerateBoard();
+        }
+      } 
         else {
         swal({
             title: 'Not quite.', 
             type: 'warning',
             confirmButtonClass: 'btn-warning'
           });          
-          dispImages = [];
-          GenerateBoard();
+        dispImages = [];
+        GenerateBoard();
     }
 });
 
+  //separate winner function
+  var winner = function(){
+if (score1 === 7) {
+   swal({
+    title: 'Winner!', 
+    text: 'Congratulations, Player 1, you know your plants!', 
+    type: 'success',
+    confirmButtonClass: 'btn-success'
+  });
+ }
+   else if (score2 === 7) {
+    swal({
+    title: 'Winner!', 
+    text: 'Congratulations, Player 2, you know your plants!', 
+    type: 'success',
+    confirmButtonClass: 'btn-success'
+  });   
 
-    //separate winner function
-    var winner = function(){
-      if (score >=7 ) {
-         swal({
-          title: 'Winner!', 
-          text: 'Congratulations, you know your plants!', 
-          type: 'success',
-          confirmButtonClass: 'btn-success'
-        });
-        return;
-      } else {
-        return;
-    }
-
+   } else {
+    return;
   }
+}
+
+
+//local storage for high score
+//^endless play
+//several categories
+
+// //bee cursor bc of course
+// $(.beepic).on('click', function(){
+// $hand = $('.hand');
+// $hand.click(function() {
+//     $hand.css('cursor','url('/images/bee.png')');
+//   });
+// });
+
 
 //optional learn more page that I want so bad :( tbc
 // $('#learn').on('click', function(){
@@ -146,10 +180,6 @@ function shuffle(array) {
 
 // //GENERATE BIG function
 // var GenerateBig = function() {}
-
-// //DISPLAY WINNER function (sweet alert?)
-// //prompt GENERATE BIG function
-// var displayWinner = function() {}
 
   });
 

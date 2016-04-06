@@ -1,4 +1,4 @@
-.script-font, #scoreDisp, #opt1-desc, #opt2-desc, #opt3-desc{
+.script-font, #scoreDisp, #opt1-desc, #opt2-desc, #opt3-desc, #p1score, #p2score{
   font-family: 'Chonburi', cursive;
   text-align: center;
   color: white;
@@ -31,14 +31,15 @@ body {
 }
 
 #opt1-desc, #opt2-desc, #opt3-desc {
-  margin-top:300px;
+  margin-top:75%;
+  font-size: 22px;
 }
 
 /*making images responsive stuff*/
 #opt1, #opt2, #opt3 {
   background-size: 100%;
 /*  width: 100%;*/
-  max-width: 30%;
+  max-width: 33%;
   min-height: 250px;
   height:auto;
 }
