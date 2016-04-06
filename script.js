@@ -85,6 +85,9 @@ function shuffle(array) {
       if ($(this).hasClass('false')){
       console.log('clicked correct image');
       score++;
+      d=document.getElementById("scoreDisp");
+      d.innerHTML='Score is ' + score + '!';
+
       winner();
       dispImages = [];
       GenerateBoard();

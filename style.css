@@ -2,10 +2,9 @@ body {
   text-align: center;
 }
 
-.script-font {
+.script-font, #scoreDisp {
   font-family: 'Chonburi', cursive;
   text-align: center;
-  font-color: black;
   color: white;
 }
 
@@ -27,8 +26,11 @@ body {
 }
 
 #opt1, #opt2, #opt3 {
+  background-size: 100%;
+  width: 100%;
   max-width: 30%;
   min-height: 300px;
+  height:auto;
 
 }
 
@@ -39,4 +41,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#scoreDisp {
+  margin-top: 20px;
 }
