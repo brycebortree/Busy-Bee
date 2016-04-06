@@ -92,11 +92,6 @@ function shuffle(array) {
   return array;
 }
 
-//points function b/c this is hard
-
-    //IF winner
-    //DISPLAY WINNER function
-    //else
 //Score function, stolen from Taylor's Know Your Planet
   $('.response').on('click', function(e){
       e.preventDefault();
@@ -122,12 +117,26 @@ function shuffle(array) {
   //separate winner function
   var winner = function(){
 if (score >=7 ) {
-        alert('You win!');
+   swal({
+    title: 'Winner!', 
+    text: 'Congratulations, you know your plants!', 
+    type: 'success',
+    confirmButtonClass: 'btn-success'
+  });
   } else {
     return;
   }
 
 }
+
+$('#learn').on('click', function() {
+  swal({
+    title: 'tester', 
+    text: 'hey this is working', 
+    type: 'success',
+    confirmButtonClass: 'btn-success'
+  });
+});
 
 //optional learn more page that I want so bad :( tbc
 // $('#learn').on('click', function(){

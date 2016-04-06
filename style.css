@@ -1,11 +1,16 @@
-body {
-  text-align: center;
-}
-
 .script-font, #scoreDisp {
   font-family: 'Chonburi', cursive;
   text-align: center;
   color: white;
+}
+
+/*pretty background*/
+body { 
+  background: url('images/bg.jpeg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*this is to make the buttons vertically centered*/
@@ -25,24 +30,21 @@ body {
   }
 }
 
+/*making images responsive stuff*/
 #opt1, #opt2, #opt3 {
   background-size: 100%;
-  width: 100%;
+/*  width: 100%;*/
   max-width: 30%;
   min-height: 300px;
   height:auto;
-
-}
-
-/*pretty background*//*CURRENTLY NOT WORKING NICE*/
-body { 
-  background: url('images/bg.jpeg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 #scoreDisp {
   margin-top: 20px;
+}
+
+#images-row {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
