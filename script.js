@@ -105,35 +105,33 @@ function shuffle(array) {
   $('.response').on('click', function(e){
       e.preventDefault();
       console.log('clicked image');
-      
       if ($(this).hasClass('false')){
       console.log('clicked correct image');
-      
         if(roundCount % 2 === 1) {
           score1++;
           d=document.getElementById("p1score");
-          d.innerHTML="Player 1's score is " + score1 + "!";
+          d.innerHTML="Player One: " + score1;
           winner();
           dispImages = [];
           GenerateBoard();
         } else {
           score2++;
           d=document.getElementById("p2score");
-          d.innerHTML="Player 2's score is " + score2 + "!";
+          d.innerHTML="Player Two: " + score2;
           winner();
           dispImages = [];
           GenerateBoard();
         }
       } 
         else {
-        swal({
-            title: 'Not quite.', 
-            type: 'warning',
-            confirmButtonClass: 'btn-warning'
-          });          
-        dispImages = [];
-        GenerateBoard();
-    }
+          swal({
+              title: 'Not quite.', 
+              type: 'warning',
+              confirmButtonClass: 'btn-warning'
+            });          
+          dispImages = [];
+          GenerateBoard();
+      }
 });
 
   //separate winner function
@@ -161,16 +159,8 @@ if (score1 === 7) {
 
 
 //local storage for high score
-//^endless play
+//^endless play?
 //several categories
-
-// //bee cursor bc of course
-// $(.beepic).on('click', function(){
-// $hand = $('.hand');
-// $hand.click(function() {
-//     $hand.css('cursor','url('/images/bee.png')');
-//   });
-// });
 
 
 //optional learn more page that I want so bad :( tbc
