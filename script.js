@@ -9,15 +9,34 @@ console.log('locked/loaded');
   var yImages = [ 
     {desc: 'Apple Tree', photo: 'images/y-apple.jpg', beeLike: true},
     {desc: 'Basil', photo: 'images/y-basil.jpg', beeLike: true},
+    {desc: 'Black Eyed Susans', photo: 'images/y-blackeyed-susans.jpg', beeLike: true},
     {desc: 'Cherry', photo: 'images/y-cherry.jpg', beeLike: true},
+    {desc: 'Clematis', photo: 'images/y-clematis.jpg', beeLike: true},
+    {desc: 'Dahlias', photo: 'images/y-dahlias.jpg', beeLike: true},
+    {desc: 'Foxglove', photo: 'images/y-foxglove.jpg', beeLike: true},
+    {desc: 'Hollyhocks', photo: 'images/y-hollyhocks.jpg', beeLike: true},
+    {desc: 'Honeysuckle', photo: 'images/y-honeysuckle.jpg', beeLike: true},
+    {desc: 'Hyacinth', photo: 'images/y-hyacinth.jpg', beeLike: true},
     {desc: 'Hyssop', photo: 'images/y-hyssop.jpg', beeLike: true},
     {desc: 'Lavendar', photo: 'images/y-lavendar.jpg', beeLike: true},
+    {desc: 'Lilac', photo: 'images/y-lilac.jpg', beeLike: true},
     {desc: 'Rosemary', photo: 'images/y-rosemary.jpg', beeLike: true},
-    {desc: 'Snapdragon', photo: 'images/y-snapdragon.jpg', beeLike: true}];
+    {desc: 'Snapdragon', photo: 'images/y-snapdragon.jpg', beeLike: true},
+    {desc: 'Snapdragon', photo: 'images/y-snapdragons.jpg', beeLike: true}];
 
   var nImages = [
+    {desc: 'Azaleas', photo: 'images/n-azaleas.jpg', beeLike: false},
+    {desc: 'Drosera n-drosera-rotundifolia', photo: 'images/n-drosera-rotundifolia.jpg', beeLike: false},
     {desc: 'Feverfew', photo: 'images/n-feverfew.jpg', beeLike: false},
+    {desc: 'Heliconia', photo: 'images/n-heliconia.jpg', beeLike: false},
+    {desc: 'Mountain Laurel', photo: 'images/n-mountain-laurel.jpg', beeLike: false},
+    {desc: 'Oleander', photo: 'images/n-oleander.jpg', beeLike: false},
     {desc: 'Pitcher Plant', photo: 'images/n-pitcher-plant.jpg', beeLike: false},
+    {desc: 'Pitcher Plant', photo: 'images/n-pitcher-plant2.jpg', beeLike: false},
+    {desc: 'Red Rosettes', photo: 'images/n-red-rosettes.jpg', beeLike: false},
+    {desc: 'Rhododendron', photo: 'images/n-rhododendron.jpg', beeLike: false},
+    {desc: 'Stargazer Lily', photo: 'images/n-stargazer-lily.jpg', beeLike: false},
+    {desc: 'Trumpet Flower', photo: 'images/n-trumpet-flower.jpg', beeLike: false},
     {desc: 'Wormwood', photo: 'images/n-wormwood.png', beeLike: false}];
 
   $('.fader').on('click', function(){
