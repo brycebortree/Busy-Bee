@@ -69,11 +69,16 @@ var GenerateBoard = function(num){
   console.log(dispImages);
   opt1.css({'background-image':'url('+dispImages[0].photo+')'});
   opt1.removeClass('true false').addClass(''+dispImages[0].beeLike+'');
+  opt1Words=document.getElementById("opt1-desc");
+  opt1Words.innerHTML=''+dispImages[0].desc+'';
   opt2.css({'background-image':'url('+dispImages[1].photo+')'});
   opt2.removeClass('true false').addClass(''+dispImages[1].beeLike+'');
+  opt2Words=document.getElementById("opt2-desc");
+  opt2Words.innerHTML=''+dispImages[1].desc+'';
   opt3.css({'background-image':'url('+dispImages[2].photo+')'});
   opt3.removeClass('true false').addClass(''+dispImages[2].beeLike+'');
-
+  opt3Words=document.getElementById("opt3-desc");
+  opt3Words.innerHTML=''+dispImages[2].desc+'';
 };
 // .addClass dispImage[0].beeLike
 
@@ -107,11 +112,15 @@ function shuffle(array) {
       GenerateBoard();
         } 
         else {
-          alert('Not quite!');
+        swal({
+            title: 'Not quite.', 
+            type: 'warning',
+            confirmButtonClass: 'btn-warning'
+          });          
           dispImages = [];
           GenerateBoard();
-          }
-        });
+    }
+});
 
 
   //separate winner function
@@ -129,14 +138,6 @@ if (score >=7 ) {
 
 }
 
-$('#learn').on('click', function() {
-  swal({
-    title: 'tester', 
-    text: 'hey this is working', 
-    type: 'success',
-    confirmButtonClass: 'btn-success'
-  });
-});
 
 //optional learn more page that I want so bad :( tbc
 // $('#learn').on('click', function(){

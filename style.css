@@ -1,4 +1,4 @@
-.script-font, #scoreDisp {
+.script-font, #scoreDisp, #opt1-desc, #opt2-desc, #opt3-desc{
   font-family: 'Chonburi', cursive;
   text-align: center;
   color: white;
@@ -28,6 +28,10 @@ body {
     /* Or */
     display: none;
   }
+}
+
+#opt1-desc, #opt2-desc, #opt3-desc {
+  margin-top:350px;
 }
 
 /*making images responsive stuff*/
