@@ -26,7 +26,7 @@ console.log('locked/loaded');
 
   var nImages = [
     {desc: 'Azaleas', photo: 'images/n-azaleas.jpg', beeLike: false},
-    {desc: 'Drosera n-drosera-rotundifolia', photo: 'images/n-drosera-rotundifolia.jpg', beeLike: false},
+    {desc: 'Drosera Rotundifolia', photo: 'images/n-drosera-rotundifolia.jpg', beeLike: false},
     {desc: 'Feverfew', photo: 'images/n-feverfew.jpg', beeLike: false},
     {desc: 'Heliconia', photo: 'images/n-heliconia.jpg', beeLike: false},
     {desc: 'Mountain Laurel', photo: 'images/n-mountain-laurel.jpg', beeLike: false},
@@ -123,21 +123,21 @@ function shuffle(array) {
 });
 
 
-  //separate winner function
-  var winner = function(){
-if (score >=7 ) {
-   swal({
-    title: 'Winner!', 
-    text: 'Congratulations, you know your plants!', 
-    type: 'success',
-    confirmButtonClass: 'btn-success'
-  });
-  } else {
-    return;
+    //separate winner function
+    var winner = function(){
+      if (score >=7 ) {
+         swal({
+          title: 'Winner!', 
+          text: 'Congratulations, you know your plants!', 
+          type: 'success',
+          confirmButtonClass: 'btn-success'
+        });
+        return;
+      } else {
+        return;
+    }
+
   }
-
-}
-
 
 //optional learn more page that I want so bad :( tbc
 // $('#learn').on('click', function(){

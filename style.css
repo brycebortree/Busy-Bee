@@ -31,7 +31,7 @@ body {
 }
 
 #opt1-desc, #opt2-desc, #opt3-desc {
-  margin-top:350px;
+  margin-top:300px;
 }
 
 /*making images responsive stuff*/
@@ -39,7 +39,7 @@ body {
   background-size: 100%;
 /*  width: 100%;*/
   max-width: 30%;
-  min-height: 300px;
+  min-height: 250px;
   height:auto;
 }
 
