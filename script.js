@@ -54,7 +54,7 @@ console.log('locked/loaded');
 
 // GENERATE BOARD function
 // Built myself -> hence every single console.log available to man
-var GenerateBoard = function(num){
+var GenerateBoard = function(){
   var opt1 = $('#opt1');
   var opt2 = $('#opt2');
   var opt3 = $('#opt3');
