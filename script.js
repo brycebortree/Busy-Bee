@@ -12,8 +12,6 @@ console.log('locked/loaded');
   var falseArr;
   var trueArr;
 
-
-
   // image arrays
   var blImages = [ 
     {desc: 'All My Puny Sorrows', photo: 'images/amps.jpg', correct: false},
@@ -84,11 +82,9 @@ console.log('locked/loaded');
     console.log("game started");
     falseArr=blImages;
     trueArr=bcImages;
-    generateBoard().;
+    generateBoard();
     dispImages = [];
   });
-
-
 
 // GENERATE BOARD function
   var generateBoard = function(){
@@ -133,10 +129,6 @@ console.log('locked/loaded');
     }
     return array;
   }
-
-//switch player function
-
-
 
 //Score function, stolen from Taylor's Know Your Planet
   $('.response').on('click', function(e){
@@ -195,8 +187,6 @@ console.log('locked/loaded');
 
 //local storage for high score
 //^endless play?
-//several categories
-
 
 //optional learn more page that I want so bad :( tbc
 // $('#learn').on('click', function(){
