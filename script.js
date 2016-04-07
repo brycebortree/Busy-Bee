@@ -1,6 +1,6 @@
 $(document).ready(function(){
-console.log('locked/loaded');
-$('.initHide').hide();
+  console.log('locked/loaded');
+  $('.initHide').hide();
 
   var roundCount = 0;
   var dispImages = [];
@@ -75,6 +75,7 @@ $('.initHide').hide();
 
   $('#startBenedict').on('click', function(){
     console.log("game started");
+    $('benInst').show();
     falseArr=blImages;
     trueArr=bcImages;
     generateBoard();
@@ -83,6 +84,7 @@ $('.initHide').hide();
 
   $('#startBee').on('click', function(){
     console.log("game started");
+    $('beeInst').show();
     falseArr=yBees;
     trueArr=nBees;
     generateBoard();
@@ -122,11 +124,8 @@ $('.initHide').hide();
 //per Auggie, Fisher-Yates shuffle function
   function shuffle(array) {
     var m = array.length, t, i;
-    // While there remain elements to shuffle…
     while (m) {
-      // Pick a remaining element…
       i = Math.floor(Math.random() * m--);
-      // And swap it with the current element.
       t = array[m];
       array[m] = array[i];
       array[i] = t;
@@ -134,7 +133,7 @@ $('.initHide').hide();
     return array;
   }
 
-//Score function, stolen from Taylor's Know Your Planet
+//Score function
   $('.response').on('click', function(e){
     e.preventDefault();
     console.log('clicked image');
@@ -145,7 +144,7 @@ $('.initHide').hide();
         dispScore1.innerHTML="Player One: " + score1;
         winner();
         dispImages = [];
-        generateBoard();
+        setTimeout(generateBoard(), 2000);
       } else {
         score2++;
         dispScore2.innerHTML="Player Two: " + score2;
@@ -174,7 +173,7 @@ $('.initHide').hide();
         type: 'success',
         confirmButtonClass: 'btn-success'
       });
-       // resetBoard();
+       resetBoard();
     } else if (score2 === 5) {
         swal({
         title: 'Winner!', 
@@ -182,10 +181,10 @@ $('.initHide').hide();
         type: 'success',
         confirmButtonClass: 'btn-success'
       }); 
-        // resetBaord();  
+        resetBoard();  
     } else {
         return;
-      }
+    }
   }
 
   var resetBoard = function() {

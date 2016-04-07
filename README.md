@@ -9,4 +9,4 @@ Approach taken
 
 Unsolved problems
 
-Potential future features: high score board, return to choose trivia type, more types of trivia, cycle through images only once, more unified scoreboard, timer, element fades out on click
+Potential future features: high score board, return to choose trivia type, more types of trivia, cycle through images only once, more unified scoreboard, timer, element fades out on click.
