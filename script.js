@@ -1,6 +1,6 @@
 $(document).ready(function(){
-console.log('locked/loaded');
-$('.initHide').hide();
+  console.log('locked/loaded');
+  $('.initHide').hide();
 
   var roundCount = 0;
   var dispImages = [];
@@ -15,15 +15,14 @@ $('.initHide').hide();
 
   // image arrays
   var blImages = [ 
-    {desc: 'All My Puny Sorrows', photo: 'images/amps.jpg', correct: false},
+    {desc: 'All My Puny Sorrows', photo:'images/amps.jpg', correct: false},
     {desc: 'Cat', photo: 'images/cat.jpg', correct: false},
-    {desc: 'Lucky Number Slevin', photo: 'images/LuckySlevin.jpg', correct: false},
-    {desc: 'Mountains', photo: 'images/mountains.jpg', correct: false},
-    {desc: 'Bees', photo: 'images/gentle-bees.gif', correct: false},
-    {desc: 'Digimon', photo: 'images/digimon.jpg', correct: false},
-    {desc: 'Tea', photo: 'images/tea.jpg', correct: false},
+    {desc: 'Lucky Number Slevin', photo:'images/LuckySlevin.jpg', correct: false},
+    {desc: 'Mountains', photo:'images/mountains.jpg', correct: false},
+    {desc: 'Bees', photo:'images/gentle-bees.gif', correct: false},
+    {desc: 'Digimon', photo:'images/digimon.jpg', correct: false},
+    {desc: 'Tea', photo:'images/tea.jpg', correct: false},
     {desc: 'A Dirty Job', photo: 'images/adirtyjob.jpg', correct: false},
-    {desc: 'Seattle Waterfront', photo: 'images/Seattle Waterfront.jpg', correct: false},
     {desc: 'Seattle Waterfront', photo: 'images/SeattleWaterfront.jpg', correct: false},
     {desc: 'Avocado Sushi', photo: 'images/avosushi.jpg', correct: false}];
 
@@ -75,6 +74,7 @@ $('.initHide').hide();
 
   $('#startBenedict').on('click', function(){
     console.log("game started");
+    $('#benInst').show();
     falseArr=blImages;
     trueArr=bcImages;
     generateBoard();
@@ -83,6 +83,7 @@ $('.initHide').hide();
 
   $('#startBee').on('click', function(){
     console.log("game started");
+    $('#beeInst').show();
     falseArr=yBees;
     trueArr=nBees;
     generateBoard();
@@ -118,15 +119,15 @@ var GenerateBoard = function(num){
     var opt3 = $('#opt3');
     roundCount++;
     var shuffledY = shuffle(falseArr);
-    // console.log(shuffledY);
+    console.log(shuffledY);
     dispImages.push(falseArr[0]);
     dispImages.push(falseArr[1]);
     var shuffledN = shuffle(trueArr);
     dispImages.push(trueArr[0]);
-    trueArr.pop();
-    // console.log(shuffledN);
+    // trueArr.pop();
+    console.log(shuffledN);
     shuffle(dispImages);
-    // console.log(dispImages);
+    console.log(dispImages);
     opt1.css({'background-image':'url('+dispImages[0].photo+')'});
     opt1.removeClass('true false').addClass(''+dispImages[0].correct+'');
     opt1Words=document.getElementById("opt1-desc");
@@ -168,7 +169,7 @@ var GenerateBoard = function(num){
         });
         winner();
         dispImages = [];
-        generateBoard();
+        setTimeout(generateBoard(), 2000);
       } else {
         score2++;
         dispScore2.innerHTML="Player Two: " + score2;
@@ -213,7 +214,7 @@ var GenerateBoard = function(num){
         resetBoard();  
     } else {
         return;
-      }
+    }
   }
 
   var resetBoard = function() {
