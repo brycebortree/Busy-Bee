@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 .script-font, 
 #scoreDisp, 
 #opt1-desc, 
@@ -14,10 +11,6 @@
   color: white;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 /*pretty background*/
 body { 
   background: url('images/bg.jpeg') no-repeat center center fixed; 
@@ -97,17 +90,8 @@ body {
 
 .scoreBox {
   background-color: rgba(255, 255, 255, 0.5);
-  border: 3px solid white;
   margin-top: 5%;
 }
-
-<<<<<<< HEAD
-.scoreBox {
-  background-color: red;
-}
-=======
->>>>>>> master
-
 
 #images-row {
   margin-top: 5%;

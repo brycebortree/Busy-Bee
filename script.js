@@ -78,7 +78,7 @@ $('.initHide').hide();
     falseArr=blImages;
     trueArr=bcImages;
     generateBoard();
-    dispImages = [];
+    dispImages=[];
   });
 
   $('#startBee').on('click', function(){
@@ -86,12 +86,10 @@ $('.initHide').hide();
     falseArr=yBees;
     trueArr=nBees;
     generateBoard();
-    dispImages = [];
+    dispImages=[];
   });
 
 // GENERATE BOARD function
-
-// Built myself -> hence every single console.log available to man
 var GenerateBoard = function(num){
   var opt1 = $('#opt1');
   var opt2 = $('#opt2');
@@ -112,9 +110,8 @@ var GenerateBoard = function(num){
   opt2.removeClass('true false').addClass(''+dispImages[1].beeLike+'');
   opt3.css({'background-image':'url('+dispImages[2].photo+')'});
   opt3.removeClass('true false').addClass(''+dispImages[2].beeLike+'');
-
 };
-// .addClass dispImage[0].beeLike
+
   var generateBoard = function(){
     var opt1 = $('#opt1');
     var opt2 = $('#opt2');
@@ -144,15 +141,11 @@ var GenerateBoard = function(num){
     opt3Words.innerHTML=''+dispImages[2].desc+'';
   };
 
-
 //per Auggie, Fisher-Yates shuffle function
   function shuffle(array) {
     var m = array.length, t, i;
-    // While there remain elements to shuffle…
     while (m) {
-      // Pick a remaining element…
       i = Math.floor(Math.random() * m--);
-      // And swap it with the current element.
       t = array[m];
       array[m] = array[i];
       array[i] = t;
@@ -160,24 +153,7 @@ var GenerateBoard = function(num){
     return array;
   }
 
-//Score function, stolen from Taylor's Know Your Planet
   $('.response').on('click', function(e){
-      e.preventDefault();
-      console.log('clicked image');
-      if($(this).hasClass(false)) {
-      console.log('clicked correct image');
-      score++; 
-      console.log(score);
-      dispImages = [];
-      GenerateBoard();
-      winner();
-        } 
-        else {
-          alert('Not quite!');
-          dispImages = [];
-          GenerateBoard();
-          }
-        });
     e.preventDefault();
     console.log('clicked image');
     if ($(this).hasClass('true')){
@@ -185,12 +161,22 @@ var GenerateBoard = function(num){
       if(roundCount % 2 === 1) {
         score1++;
         dispScore1.innerHTML="Player One: " + score1;
+        swal({
+          title: 'Good one!', 
+          type: 'success',
+          confirmButtonClass: 'btn-success'
+        });
         winner();
         dispImages = [];
         generateBoard();
       } else {
         score2++;
         dispScore2.innerHTML="Player Two: " + score2;
+        swal({
+          title: 'Good one!', 
+          type: 'success',
+          confirmButtonClass: 'btn-success'
+        });
         winner();
         dispImages = [];
         generateBoard();
@@ -216,20 +202,19 @@ var GenerateBoard = function(num){
         type: 'success',
         confirmButtonClass: 'btn-success'
       });
-       // resetBoard();
+       resetBoard();
     } else if (score2 === 5) {
         swal({
-        title: 'Winner!', 
-        text: 'Congratulations, Player 2, you know your stuff!', 
-        type: 'success',
-        confirmButtonClass: 'btn-success'
+          title: 'Winner!', 
+          text: 'Congratulations, Player 2, you know your stuff!', 
+          type: 'success',
+          confirmButtonClass: 'btn-success'
       }); 
-        // resetBaord();  
+        resetBoard();  
     } else {
         return;
       }
   }
-}
 
   var resetBoard = function() {
     var roundCount = 0;
@@ -250,11 +235,6 @@ var GenerateBoard = function(num){
 //   console.log('learn more');
 // });
 
-// //GENERATE BIG function
-// var GenerateBig = function() {}
-
-// //DISPLAY WINNER function (sweet alert?)
-// //prompt GENERATE BIG function
 
 });
 
