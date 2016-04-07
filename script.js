@@ -1,5 +1,6 @@
 $(document).ready(function(){
 console.log('locked/loaded');
+$('.initHide').hide();
 
   var roundCount = 0;
   var dispImages = [];
@@ -67,20 +68,22 @@ console.log('locked/loaded');
 
   $('.fader').on('click', function(){
     $(this).parent().fadeOut();
-  });
-
-  $('#startBee').on('click', function(){
-    console.log("game started");
-    falseArr=yBees;
-    trueArr=nBees;
-    generateBoard();
-    dispImages = [];
+    $( "#images-row" ).show();
+    $( ".scoreBox" ).show();
   });
 
   $('#startBenedict').on('click', function(){
     console.log("game started");
     falseArr=blImages;
     trueArr=bcImages;
+    generateBoard();
+    dispImages = [];
+  });
+
+  $('#startBee').on('click', function(){
+    console.log("game started");
+    falseArr=yBees;
+    trueArr=nBees;
     generateBoard();
     dispImages = [];
   });
@@ -169,7 +172,7 @@ console.log('locked/loaded');
         type: 'success',
         confirmButtonClass: 'btn-success'
       });
-       resetBoard();
+       // resetBoard();
     } else if (score2 === 5) {
         swal({
         title: 'Winner!', 
@@ -177,7 +180,7 @@ console.log('locked/loaded');
         type: 'success',
         confirmButtonClass: 'btn-success'
       }); 
-        resetBaord();  
+        // resetBaord();  
     } else {
         return;
       }
@@ -203,9 +206,5 @@ console.log('locked/loaded');
 // $('#learn').on('click', function(){
 //   console.log('learn more');
 // });
-
-// //GENERATE BIG function
-// var GenerateBig = function() {}
-
 });
 

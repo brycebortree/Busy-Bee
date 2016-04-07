@@ -1,2 +1,10 @@
-# Busy-Bee
-Project 1 for GA: a game!
+Busy-Bee
+GA Project #1
+
+Tech used
+
+Approach taken
+
+Installation instructions
+
+Unsolved problems

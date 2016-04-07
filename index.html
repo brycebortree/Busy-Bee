@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <title>Busy Bee</title>
   <link rel="shortcut icon" href="images/tab-bee.ico">
   <link href='https://fonts.googleapis.com/css?family=Cinzel:400,700|Chonburi' rel='stylesheet' type='text/css'>
@@ -10,25 +9,26 @@
   <link rel="stylesheet" href="sweetalert-master/dist/sweetalert.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
   <container class="container">
-    <div class="row">
-
+    <section class="row">
+      <div>
         <h1 class="script-font">Busy Bee</h1>
-  <!--       <h3 class="script-font">build a bee friendly garden in your browser</h3>
-   -->  
-    </div>
+        <h3 class="script-font">one of these three images are unfriendly to Bryce or Bees.</h3>
+        <h3 class="script-font">click the unfriendly item to earn points to 5 to win</h3>
+      </div>
+    </section>
     <hr>
 
-    <section class="row vertical-center">
+    <section class="row col-md-offset-3 col-md-6 col-md-offset-3 vertical-center">
   <!-- categories-->    
       <button type="button" class="btn btn-lg btn-failure center-block fader" id="startBenedict">Bryce hates Benedict</button>
-      <button type="button" class="btn btn-lg btn-success center-block fader" id="startBee">Play Busy Bee!</button>
+      <button type="button" class="btn btn-lg btn-success center-block fader" id="startBee">Busy Bee!</button>
     </section>
 
-    <section class="row" id="images-row">
+    <section class="row initHide" id="images-row">
       <div class="col-md-4 col-s-12 img-rounded img-responsive response" id="opt1">
         <p id="opt1-desc"></p>
       </div>
@@ -41,10 +41,11 @@
     </section>
 
     <section class="row md-col-offset-3 md-col-6 md-col-offset-3">
-      <div class="scoreBox">
-        <h3 class="script-font" id="scoreDisp"></h3>
-        <h3 class="col-md-offset-1 col-md-5" id="p1score"></h3>
-        <h3 class="col-md-5 col-md-offset-1" id="p2score"></h3>
+      <div class="scoreBox initHide">
+        <div class="script-font" id="scoreDisp">
+          <h3 class="col-md-offset-1 col-md-5" id="p1score"></h3>
+          <h3 class="col-md-5 col-md-offset-1" id="p2score"></h3>
+        </div>
       </div>
     </section>
   </container>

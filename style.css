@@ -1,11 +1,13 @@
-.script-font, #scoreDisp, #opt1-desc, #opt2-desc, #opt3-desc, #p1score, #p2score{
+.script-font, 
+#scoreDisp, 
+#opt1-desc, 
+#opt2-desc, 
+#opt3-desc, 
+#p1score, 
+#p2score{
   font-family: 'Chonburi', cursive;
   text-align: center;
   color: white;
-}
-
-div .scoreBox {
-  background-color: rgba(255, 255, 255, 0.9);
 }
 
 /*pretty background*/
@@ -33,20 +35,34 @@ body {
     /* Or */
     display: none;
   }
+  #opt1, #opt2, #opt3 {
+    text-align: center;
+  }
 }
 
+/*sizing plus making the font easier to read*/
 #opt1-desc, #opt2-desc, #opt3-desc {
   margin-top:75%;
   font-size: 22px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /*making images responsive stuff*/
 #opt1, #opt2, #opt3 {
   background-size: 100%;
-/*  width: 100%;*/
   max-width: 33%;
   min-height: 250px;
   height:auto;
+  border: solid 3px white;
+}
+
+/*#score1,
+#score2 {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}*/
+
+.scoreBox {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 #scoreDisp {
