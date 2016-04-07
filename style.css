@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 .script-font, 
 #scoreDisp, 
 #opt1-desc, 
@@ -11,7 +14,10 @@
   color: white;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 /*pretty background*/
 body { 
   background: url('images/bg.jpeg') no-repeat center center fixed; 
@@ -59,7 +65,9 @@ body {
 
 
 /*sizing plus making the font easier to read*/
-#opt1-desc, #opt2-desc, #opt3-desc {
+#opt1-desc, 
+#opt2-desc, 
+#opt3-desc {
   margin-top:75%;
 }
 
@@ -79,7 +87,6 @@ body {
   max-width: 33%;
   min-height: 250px;
   height:auto;
-
   border: solid 3px white;
 }
 
@@ -91,15 +98,16 @@ body {
 .scoreBox {
   background-color: rgba(255, 255, 255, 0.5);
   border: 3px solid white;
+  margin-top: 5%;
 }
 
+<<<<<<< HEAD
 .scoreBox {
   background-color: red;
 }
+=======
+>>>>>>> master
 
-#scoreDisp {
-  margin-top: 5%;
-}
 
 #images-row {
   margin-top: 5%;

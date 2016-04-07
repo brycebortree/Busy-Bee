@@ -126,6 +126,7 @@ var GenerateBoard = function(num){
     dispImages.push(falseArr[1]);
     var shuffledN = shuffle(trueArr);
     dispImages.push(trueArr[0]);
+    trueArr.pop();
     // console.log(shuffledN);
     shuffle(dispImages);
     // console.log(dispImages);
