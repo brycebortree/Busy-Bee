@@ -57,7 +57,9 @@ body {
 
 
 /*sizing plus making the font easier to read*/
-#opt1-desc, #opt2-desc, #opt3-desc {
+#opt1-desc, 
+#opt2-desc, 
+#opt3-desc {
   margin-top:75%;
 }
 
@@ -88,11 +90,10 @@ body {
 .scoreBox {
   background-color: rgba(255, 255, 255, 0.5);
   border: 3px solid white;
-}
-
-#scoreDisp {
   margin-top: 5%;
 }
+
+
 
 #images-row {
   margin-top: 5%;
