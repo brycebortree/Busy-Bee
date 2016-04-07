@@ -15,15 +15,14 @@ $(document).ready(function(){
 
   // image arrays
   var blImages = [ 
-    {desc: 'All My Puny Sorrows', photo: 'images/amps.jpg', correct: false},
+    {desc: 'All My Puny Sorrows', photo:'images/amps.jpg', correct: false},
     {desc: 'Cat', photo: 'images/cat.jpg', correct: false},
-    {desc: 'Lucky Number Slevin', photo: 'images/LuckySlevin.jpg', correct: false},
-    {desc: 'Mountains', photo: 'images/mountains.jpg', correct: false},
-    {desc: 'Bees', photo: 'images/gentle-bees.gif', correct: false},
-    {desc: 'Digimon', photo: 'images/digimon.jpg', correct: false},
-    {desc: 'Tea', photo: 'images/tea.jpg', correct: false},
+    {desc: 'Lucky Number Slevin', photo:'images/LuckySlevin.jpg', correct: false},
+    {desc: 'Mountains', photo:'images/mountains.jpg', correct: false},
+    {desc: 'Bees', photo:'images/gentle-bees.gif', correct: false},
+    {desc: 'Digimon', photo:'images/digimon.jpg', correct: false},
+    {desc: 'Tea', photo:'images/tea.jpg', correct: false},
     {desc: 'A Dirty Job', photo: 'images/adirtyjob.jpg', correct: false},
-    {desc: 'Seattle Waterfront', photo: 'images/Seattle Waterfront.jpg', correct: false},
     {desc: 'Seattle Waterfront', photo: 'images/SeattleWaterfront.jpg', correct: false},
     {desc: 'Avocado Sushi', photo: 'images/avosushi.jpg', correct: false}];
 
@@ -75,7 +74,7 @@ $(document).ready(function(){
 
   $('#startBenedict').on('click', function(){
     console.log("game started");
-    $('benInst').show();
+    $('#benInst').show();
     falseArr=blImages;
     trueArr=bcImages;
     generateBoard();
@@ -84,7 +83,7 @@ $(document).ready(function(){
 
   $('#startBee').on('click', function(){
     console.log("game started");
-    $('beeInst').show();
+    $('#beeInst').show();
     falseArr=yBees;
     trueArr=nBees;
     generateBoard();
@@ -98,15 +97,15 @@ $(document).ready(function(){
     var opt3 = $('#opt3');
     roundCount++;
     var shuffledY = shuffle(falseArr);
-    // console.log(shuffledY);
+    console.log(shuffledY);
     dispImages.push(falseArr[0]);
     dispImages.push(falseArr[1]);
     var shuffledN = shuffle(trueArr);
     dispImages.push(trueArr[0]);
-    trueArr.pop();
-    // console.log(shuffledN);
+    // trueArr.pop();
+    console.log(shuffledN);
     shuffle(dispImages);
-    // console.log(dispImages);
+    console.log(dispImages);
     opt1.css({'background-image':'url('+dispImages[0].photo+')'});
     opt1.removeClass('true false').addClass(''+dispImages[0].correct+'');
     opt1Words=document.getElementById("opt1-desc");
