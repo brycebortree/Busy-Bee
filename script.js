@@ -12,8 +12,6 @@ console.log('locked/loaded');
   var falseArr;
   var trueArr;
 
-
-
   // image arrays
   var blImages = [ 
     {desc: 'All My Puny Sorrows', photo: 'images/amps.jpg', correct: false},
@@ -25,13 +23,7 @@ console.log('locked/loaded');
     {desc: 'Tea', photo: 'images/tea.jpg', correct: false},
     {desc: 'A Dirty Job', photo: 'images/adirtyjob.jpg', correct: false},
     {desc: 'Seattle Waterfront', photo: 'images/Seattle Waterfront.jpg', correct: false},
-    {desc: 'Avocado Sushi', photo: 'images/avosushi.jpg', correct: false},
-
-    {desc: 'Lavender', photo: 'images/y-lavender.jpg', correct: false},
-    {desc: 'Lilac', photo: 'images/y-lilac.jpg', correct: false},
-    {desc: 'Rosemary', photo: 'images/y-rosemary.jpg', correct: false},
-    {desc: 'Snapdragon', photo: 'images/y-snapdragon.jpg', correct: false},
-    {desc: 'Snapdragon', photo: 'images/y-snapdragons.jpg', correct: false}];
+    {desc: 'Avocado Sushi', photo: 'images/avosushi.jpg', correct: false}];
 
   var bcImages = [ 
     {desc: 'Benedict Cumberbatch', photo: 'images/bc1.jpg', correct: true},
@@ -77,7 +69,6 @@ console.log('locked/loaded');
     $(this).parent().fadeOut();
   });
 
-
   $('#startBee').on('click', function(){
     console.log("game started");
     falseArr=yBees;
@@ -93,8 +84,6 @@ console.log('locked/loaded');
     generateBoard();
     dispImages = [];
   });
-
-
 
 // GENERATE BOARD function
   var generateBoard = function(){
@@ -140,10 +129,6 @@ console.log('locked/loaded');
     return array;
   }
 
-//switch player function
-
-
-
 //Score function, stolen from Taylor's Know Your Planet
   $('.response').on('click', function(e){
     e.preventDefault();
@@ -172,8 +157,8 @@ console.log('locked/loaded');
           });          
         dispImages = [];
         generateBoard();
-    }
-});
+      }
+    });
 
   //separate winner function
   var winner = function(){
@@ -184,20 +169,30 @@ console.log('locked/loaded');
         type: 'success',
         confirmButtonClass: 'btn-success'
       });
-     }
-       else if (score2 === 5) {
+       resetBoard();
+    } else if (score2 === 5) {
         swal({
         title: 'Winner!', 
         text: 'Congratulations, Player 2, you know your stuff!', 
         type: 'success',
         confirmButtonClass: 'btn-success'
-      });   
-
-       } else {
+      }); 
+        resetBaord();  
+    } else {
         return;
       }
-}
+  }
 
+  var resetBoard = function() {
+    var roundCount = 0;
+    var dispImages = [];
+    var score1 = 0;
+    var score2 = 0;
+    dispScore1=document.getElementById("p1score");
+    dispScore1.innerHTML="Player One: " + 0;
+    dispScore2=document.getElementById("p2score");
+    dispScore2.innerHTML="Player Two: " + 0;
+  }
 
 //local storage for high score
 //^endless play?
@@ -212,5 +207,5 @@ console.log('locked/loaded');
 // //GENERATE BIG function
 // var GenerateBig = function() {}
 
-  });
+});
 
