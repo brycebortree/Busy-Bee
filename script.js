@@ -23,7 +23,11 @@ $('.initHide').hide();
     {desc: 'Digimon', photo: 'images/digimon.jpg', correct: false},
     {desc: 'Tea', photo: 'images/tea.jpg', correct: false},
     {desc: 'A Dirty Job', photo: 'images/adirtyjob.jpg', correct: false},
+<<<<<<< HEAD
     {desc: 'Seattle Waterfront', photo: 'images/Seattle Waterfront.jpg', correct: false},
+=======
+    {desc: 'Seattle Waterfront', photo: 'images/SeattleWaterfront.jpg', correct: false},
+>>>>>>> scoreboard
     {desc: 'Avocado Sushi', photo: 'images/avosushi.jpg', correct: false}];
 
   var bcImages = [ 
@@ -199,8 +203,6 @@ $('.initHide').hide();
 
 //local storage for high score
 //^endless play?
-//several categories
-
 
 //optional learn more page that I want so bad :( tbc
 // $('#learn').on('click', function(){

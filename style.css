@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .script-font, 
 #scoreDisp, 
 #opt1-desc, 
@@ -10,6 +11,8 @@
   color: white;
 }
 
+=======
+>>>>>>> scoreboard
 /*pretty background*/
 body { 
   background: url('images/bg.jpeg') no-repeat center center fixed; 
@@ -17,7 +20,18 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.script-font, 
+#scoreDisp, 
+#opt1-desc, 
+#opt2-desc, 
+#opt3-desc, 
+#p1score, 
+#p2score{
+  font-family: 'Chonburi', cursive;
+  text-align: center;
+  color: white;
 }
 
 /*this is to make the buttons vertically centered*/
@@ -32,27 +46,41 @@ body {
 @media (max-width: 768px) {
   .vertical-center:before {
     height: auto;
-    /* Or */
-    display: none;
+  }
+  #opt1, 
+  #opt2, 
+  #opt3 {
+      max-width: 100%;
+      max-height:100%;
   }
   #opt1, #opt2, #opt3 {
     text-align: center;
   }
 }
 
+<<<<<<< HEAD
 /*sizing plus making the font easier to read*/
 #opt1-desc, #opt2-desc, #opt3-desc {
   margin-top:75%;
+=======
+#opt1-desc, 
+#opt2-desc, 
+#opt3-desc {
+  margin-top:90%;
+>>>>>>> scoreboard
   font-size: 22px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /*making images responsive stuff*/
-#opt1, #opt2, #opt3 {
+#opt1, 
+#opt2, 
+#opt3 {
   background-size: 100%;
   max-width: 33%;
   min-height: 250px;
   height:auto;
+<<<<<<< HEAD
   border: solid 3px white;
 }
 
@@ -63,13 +91,21 @@ body {
 
 .scoreBox {
     background-color: rgba(255, 255, 255, 0.5);
+=======
+  border: 3px solid white;
+}
+
+.scoreBox {
+  background-color: red;
+>>>>>>> scoreboard
 }
 
 #scoreDisp {
-  margin-top: 20px;
+  margin-top: 5%;
 }
 
 #images-row {
+  margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
   display: block;
