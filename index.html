@@ -5,41 +5,57 @@
   <title>Busy Bee</title>
   <link rel="shortcut icon" href="images/tab-bee.ico">
   <link href='https://fonts.googleapis.com/css?family=Cinzel:400,700|Chonburi' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="sweetalert-master/dist/sweetalert.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="row">
-    <h1 class="script-font">Busy Bee</h1>
-      <h3 class="script-font">build a bee friendly garden in your browser</h3>
-  </div>
-  <hr>
+  <container class="container">
+    <section class="row">
+      <div>
+        <h1 class="script-font">Busy Bee</h1>
+        <h3 class="script-font">one of these three images are unfriendly to Bryce or Bees.</h3>
+        <h3 class="script-font">click the unfriendly item to earn points to 5 to win</h3>
+      </div>
+    </section>
+    <hr>
 
-  <section class="row vertical-center">
-<!--   optional learn more page -->
- <!--    <button type="button" class="btn btn-lg btn-warning center-block fader" id="learn">Learn Plants</button> -->
+    <section class="row col-md-offset-3 col-md-6 col-md-offset-3 vertical-center">
+  <!-- categories-->    
+      <button type="button" class="btn btn-lg btn-failure center-block fader" id="startBenedict">Bryce hates Benedict</button>
+      <button type="button" class="btn btn-lg btn-success center-block fader" id="startBee">Busy Bee!</button>
+    </section>
 
-    <button type="button" class="btn btn-lg btn-success center-block fader" id="startGame">Play Busy Bee!</button>
-  </section>
-  <section class="row" id="images-row">
-    <div class="col-md-4 img-rounded response" id="opt1">
-    </div>
-    <div class="col-md-4 img-rounded response" id="opt2">
-    </div>
-    <div class="col-md-4 img-rounded response" id="opt3">
-    </div>
-  </section>
-  <section class="row">
-    <p id="score"></p>
-  </section>
+    <section class="row initHide" id="images-row">
+      <div class="col-md-4 col-s-12 img-rounded img-responsive response" id="opt1">
+        <p id="opt1-desc"></p>
+      </div>
+      <div class="col-md-4 col-s-12 img-rounded img-responsive response" id="opt2">
+        <p id="opt2-desc"></p>
+      </div>
+      <div class="col-md-4 col-s-12 img-rounded img-responsive response" id="opt3">
+        <p id="opt3-desc"></p>
+      </div>
+    </section>
+
+    <section class="row md-col-offset-3 md-col-6 md-col-offset-3">
+      <div class="scoreBox initHide">
+        <div class="script-font" id="scoreDisp">
+          <h3 class="col-md-offset-1 col-md-5" id="p1score"></h3>
+          <h3 class="col-md-5 col-md-offset-1" id="p2score"></h3>
+        </div>
+      </div>
+    </section>
+  </container>
 
 <!--   jQuery-->  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <!--   bootstrap -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <!--   sweetAlert -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
+  <script src="sweetalert-master/dist/sweetalert.min.js"></script> 
 <!--   javascript -->
    <script type="text/javascript" src="script.js"></script>
 </body>
