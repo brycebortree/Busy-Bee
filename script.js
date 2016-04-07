@@ -24,14 +24,8 @@ console.log('locked/loaded');
     {desc: 'Digimon', photo: 'images/digimon.jpg', correct: false},
     {desc: 'Tea', photo: 'images/tea.jpg', correct: false},
     {desc: 'A Dirty Job', photo: 'images/adirtyjob.jpg', correct: false},
-    {desc: 'Seattle Waterfront', photo: 'images/Seattle Waterfront.jpg', correct: false},
-    {desc: 'Avocado Sushi', photo: 'images/avosushi.jpg', correct: false},
-
-    {desc: 'Lavender', photo: 'images/y-lavender.jpg', correct: false},
-    {desc: 'Lilac', photo: 'images/y-lilac.jpg', correct: false},
-    {desc: 'Rosemary', photo: 'images/y-rosemary.jpg', correct: false},
-    {desc: 'Snapdragon', photo: 'images/y-snapdragon.jpg', correct: false},
-    {desc: 'Snapdragon', photo: 'images/y-snapdragons.jpg', correct: false}];
+    {desc: 'Seattle Waterfront', photo: 'images/SeattleWaterfront.jpg', correct: false},
+    {desc: 'Avocado Sushi', photo: 'images/avosushi.jpg', correct: false}];
 
   var bcImages = [ 
     {desc: 'Benedict Cumberbatch', photo: 'images/bc1.jpg', correct: true},
@@ -90,7 +84,7 @@ console.log('locked/loaded');
     console.log("game started");
     falseArr=blImages;
     trueArr=bcImages;
-    generateBoard();
+    generateBoard().;
     dispImages = [];
   });
 
