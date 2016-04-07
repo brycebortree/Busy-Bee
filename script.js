@@ -166,7 +166,7 @@ function shuffle(array) {
 if (score1 === 7) {
    swal({
     title: 'Winner!', 
-    text: 'Congratulations, Player 1, you know your plants!', 
+    text: 'Congratulations, Player 1, you know your stuff!', 
     type: 'success',
     confirmButtonClass: 'btn-success'
   });
@@ -174,7 +174,7 @@ if (score1 === 7) {
    else if (score2 === 7) {
     swal({
     title: 'Winner!', 
-    text: 'Congratulations, Player 2, you know your plants!', 
+    text: 'Congratulations, Player 2, you know your stuff!', 
     type: 'success',
     confirmButtonClass: 'btn-success'
   });   
