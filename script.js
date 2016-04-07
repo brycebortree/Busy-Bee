@@ -23,11 +23,8 @@ $('.initHide').hide();
     {desc: 'Digimon', photo: 'images/digimon.jpg', correct: false},
     {desc: 'Tea', photo: 'images/tea.jpg', correct: false},
     {desc: 'A Dirty Job', photo: 'images/adirtyjob.jpg', correct: false},
-<<<<<<< HEAD
     {desc: 'Seattle Waterfront', photo: 'images/Seattle Waterfront.jpg', correct: false},
-=======
     {desc: 'Seattle Waterfront', photo: 'images/SeattleWaterfront.jpg', correct: false},
->>>>>>> scoreboard
     {desc: 'Avocado Sushi', photo: 'images/avosushi.jpg', correct: false}];
 
   var bcImages = [ 
