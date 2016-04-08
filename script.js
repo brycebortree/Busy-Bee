@@ -169,8 +169,7 @@ var GenerateBoard = function(num){
         });
         winner();
         dispImages = [];
-        setTimeout(generateBoard(), 2000);
-      } else {
+        } else {
         score2++;
         dispScore2.innerHTML="Player Two: " + score2;
         swal({
@@ -196,7 +195,7 @@ var GenerateBoard = function(num){
 
   //separate winner function
   var winner = function(){
-    if (score1 === 5) {
+    if (score1 >= 5) {
        swal({
         title: 'Winner!', 
         text: 'Congratulations, Player 1, you know your stuff!', 
@@ -204,7 +203,7 @@ var GenerateBoard = function(num){
         confirmButtonClass: 'btn-success'
       });
        // resetBoard();
-    } else if (score2 === 5) {
+    } else if (score2 >= 5) {
         swal({
           title: 'Winner!', 
           text: 'Congratulations, Player 2, you know your stuff!', 
