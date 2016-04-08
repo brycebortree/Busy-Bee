@@ -67,7 +67,7 @@ $(document).ready(function(){
     {desc: 'Wormwood', photo: 'images/n-wormwood.jpg', correct: true}];
 
   $('.fader').on('click', function(){
-    $(this).parent().fadeOut();
+    $('.fader').fadeOut();
     $( "#images-row" ).show();
     $( ".scoreBox" ).show();
   });

@@ -10,7 +10,6 @@
   text-align: center;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
 }
 
 /*pretty background*/
@@ -20,6 +19,15 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.left{
+  float: left;
+}
+
+.right {
+  float: right;
+  background-color: #CCAC00;
 }
 
 .script-font, 
@@ -35,7 +43,7 @@ body {
 }
 
 /*this is to make the buttons vertically centered*/
-.vertical-center {
+/*.vertical-center {
   min-height: 100%;
   min-height: 100vh;
   display: flex;
@@ -43,7 +51,7 @@ body {
 }
 
 /*this is for vertically centering buttons on small screens*/
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .vertical-center:before {
     height: auto;
   }
@@ -55,12 +63,17 @@ body {
     max-height:100%;
     float: left;
   }
+}*/
+
+#beepic {
+  width: 30px;
+  margin: 0 auto;
 }
 
 #opt1-desc, 
 #opt2-desc, 
 #opt3-desc {
-  margin-top:90%;
+  margin-top:85%;
   font-size: 22px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -70,8 +83,8 @@ body {
 #opt2, 
 #opt3 {
   background-size: 100%;
-  max-width: 33%;
-  min-height: 250px;
+  max-width: 50%;
+  min-height: auto;
   height:auto;
   border: solid 3px white;
 }
