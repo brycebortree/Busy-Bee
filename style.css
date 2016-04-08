@@ -28,6 +28,7 @@ body {
 .right {
   float: right;
   background-color: #CCAC00;
+  height: 100vh;
 }
 
 .script-font, 
