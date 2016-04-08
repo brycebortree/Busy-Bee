@@ -21,14 +21,8 @@ body {
   background-size: cover;
 }
 
-.left{
-  float: left;
-}
-
-.right {
-  float: right;
-  background-color: #CCAC00;
-  height: 100vh;
+.header {
+  background-color: CCAC00;
 }
 
 .script-font, 
