@@ -21,6 +21,10 @@ body {
   background-size: cover;
 }
 
+.header {
+  background-color: CCAC00;
+}
+
 .script-font, 
 #scoreDisp, 
 #opt1-desc, 
