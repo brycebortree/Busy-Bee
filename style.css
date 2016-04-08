@@ -21,32 +21,21 @@ body {
   background-size: cover;
 }
 
-.header {
+/*.header {
   background-color: CCAC00;
-}
+}*/
 
-.script-font, 
-#scoreDisp, 
-#opt1-desc, 
-#opt2-desc, 
-#opt3-desc, 
-#p1score, 
-#p2score{
-  font-family: 'Chonburi', cursive;
-  text-align: center;
-  color: white;
-}
 
 /*this is to make the buttons vertically centered*/
-/*.vertical-center {
+.vertical-center {
   min-height: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
-/*this is for vertically centering buttons on small screens*/
-/*@media (max-width: 768px) {
+/*this is for vertically centering buttons on small screens
+*/@media (max-width: 768px) {
   .vertical-center:before {
     height: auto;
   }
@@ -58,12 +47,8 @@ body {
     max-height:100%;
     float: left;
   }
-}*/
-
-#beepic {
-  width: 30px;
-  margin: 0 auto;
 }
+
 
 #opt1-desc, 
 #opt2-desc, 
@@ -78,7 +63,7 @@ body {
 #opt2, 
 #opt3 {
   background-size: 100%;
-  max-width: 50%;
+  max-width: 33.3%;
   min-height: auto;
   height:auto;
   border: solid 3px white;
@@ -90,7 +75,7 @@ body {
 
 #images-row {
   margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
+/*  margin-left: auto;
+  margin-right: auto;*/
   display: block;
 }
