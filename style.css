@@ -21,11 +21,6 @@ body {
   background-size: cover;
 }
 
-/*.header {
-  background-color: CCAC00;
-}*/
-
-
 /*this is to make the buttons vertically centered*/
 .vertical-center {
   min-height: 100%;
@@ -49,7 +44,6 @@ body {
   }
 }
 
-
 #opt1-desc, 
 #opt2-desc, 
 #opt3-desc {
@@ -70,11 +64,11 @@ body {
 }
 
 .scoreBox {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 #images-row {
-  margin-top: 5%;
+  margin-top: 0%;
 /*  margin-left: auto;
   margin-right: auto;*/
   display: block;

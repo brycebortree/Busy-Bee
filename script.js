@@ -203,7 +203,7 @@ var GenerateBoard = function(num){
         type: 'success',
         confirmButtonClass: 'btn-success'
       });
-       resetBoard();
+       // resetBoard();
     } else if (score2 === 5) {
         swal({
           title: 'Winner!', 
@@ -211,22 +211,22 @@ var GenerateBoard = function(num){
           type: 'success',
           confirmButtonClass: 'btn-success'
       }); 
-        resetBoard();  
+        // resetBoard();  
     } else {
         return;
     }
   }
 
-  var resetBoard = function() {
-    var roundCount = 0;
-    var dispImages = [];
-    var score1 = 0;
-    var score2 = 0;
-    dispScore1=document.getElementById("p1score");
-    dispScore1.innerHTML="Player One: " + 0;
-    dispScore2=document.getElementById("p2score");
-    dispScore2.innerHTML="Player Two: " + 0;
-  }
+  // var resetBoard = function() {
+  //   var roundCount = 0;
+  //   var dispImages = [];
+  //   var score1 = 0;
+  //   var score2 = 0;
+  //   dispScore1=document.getElementById("p1score");
+  //   dispScore1.innerHTML="Player One: " + 0;
+  //   dispScore2=document.getElementById("p2score");
+  //   dispScore2.innerHTML="Player Two: " + 0;
+  // }
 
 //local storage for high score
 //^endless play?
