@@ -123,7 +123,6 @@ var GenerateBoard = function(num){
     dispImages.push(falseArr[1]);
     var shuffledN = shuffle(trueArr);
     dispImages.push(trueArr[0]);
-    // trueArr.pop();
     console.log(shuffledN);
     shuffle(dispImages);
     console.log(dispImages);
@@ -166,8 +165,12 @@ var GenerateBoard = function(num){
           type: 'success',
           confirmButtonClass: 'btn-success'
         });
+        // checks for winner
         winner();
+        // clears array
         dispImages = [];
+        // creates new board
+        generateBoard();
         } else {
         score2++;
         dispScore2.innerHTML="Player Two: " + score2;
@@ -215,16 +218,16 @@ var GenerateBoard = function(num){
     }
   }
 
-  // var resetBoard = function() {
-  //   var roundCount = 0;
-  //   var dispImages = [];
-  //   var score1 = 0;
-  //   var score2 = 0;
-  //   dispScore1=document.getElementById("p1score");
-  //   dispScore1.innerHTML="Player One: " + 0;
-  //   dispScore2=document.getElementById("p2score");
-  //   dispScore2.innerHTML="Player Two: " + 0;
-  // }
+  var resetBoard = function() {
+    var roundCount = 0;
+    var dispImages = [];
+    var score1 = 0;
+    var score2 = 0;
+    dispScore1=document.getElementById("p1score");
+    dispScore1.innerHTML="Player One: " + 0;
+    dispScore2=document.getElementById("p2score");
+    dispScore2.innerHTML="Player Two: " + 0;
+  }
 
 //local storage for high score
 //^endless play?
