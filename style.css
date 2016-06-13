@@ -17,6 +17,11 @@ body {
   font-family: 'Chonburi', cursive;
   text-align: center;
   color: white;
+  text-shadow: 2px 2px #242424;
+}
+
+.pushdown {
+  margin-top: 100px;
 }
 
 /*this is to make the buttons vertically centered*/
@@ -59,7 +64,8 @@ body {
 }
 
 .scoreBox {
-  background-color: red;
+  background-color: gold;
+  display: none;
 }
 
 #scoreDisp {
@@ -71,4 +77,5 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  display: none;
 }

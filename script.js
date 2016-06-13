@@ -67,11 +67,15 @@ console.log('locked/loaded');
 
   $('.fader').on('click', function(){
     $(this).parent().fadeOut();
+    $('#images-row').fadeIn("slow");
+    $('.scoreBox').fadeIn("slow");
+
   });
 
 
+
+// choose between buttons/display arrays
   $('#startBee').on('click', function(){
-    console.log("game started");
     falseArr=yBees;
     trueArr=nBees;
     generateBoard();
@@ -79,7 +83,6 @@ console.log('locked/loaded');
   });
 
   $('#startBenedict').on('click', function(){
-    console.log("game started");
     falseArr=blImages;
     trueArr=bcImages;
     generateBoard();
@@ -93,14 +96,11 @@ console.log('locked/loaded');
     var opt3 = $('#opt3');
     roundCount++;
     var shuffledY = shuffle(falseArr);
-    // console.log(shuffledY);
     dispImages.push(falseArr[0]);
     dispImages.push(falseArr[1]);
     var shuffledN = shuffle(trueArr);
     dispImages.push(trueArr[0]);
-    // console.log(shuffledN);
     shuffle(dispImages);
-    // console.log(dispImages);
     opt1.css({'background-image':'url('+dispImages[0].photo+')'});
     opt1.removeClass('true false').addClass(''+dispImages[0].correct+'');
     opt1Words=document.getElementById("opt1-desc");
