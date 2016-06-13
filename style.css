@@ -64,6 +64,8 @@ button {
   background-color: gold;
   display: none;
   margin-top: 100px;
+  width: 100%;
+  border: 1px solid white;
 }
 
 #scoreDisp {
