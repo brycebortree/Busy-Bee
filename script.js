@@ -66,7 +66,7 @@ console.log('locked/loaded');
     {desc: 'Wormwood', photo: 'images/n-wormwood.jpg', correct: true}];
 
   $('.fader').on('click', function(){
-    $(this).parent().fadeOut();
+    $(this).parent().hide();
     $('#images-row').fadeIn("slow");
     $('.scoreBox').fadeIn("slow");
 
@@ -187,11 +187,6 @@ console.log('locked/loaded');
 
 //local storage for high score
 //^endless play?
-
-//optional learn more page that I want so bad :( tbc
-// $('#learn').on('click', function(){
-//   console.log('learn more');
-// });
 
 // //GENERATE BIG function
 // var GenerateBig = function() {}
