@@ -57,6 +57,10 @@ button {
   margin-top: 100px;
 }
 
+#images-row {
+  margin-top: 100px;
+}
+
 /*this is to make the buttons vertically centered*/
 .vertical-center {
   min-height: 100%;

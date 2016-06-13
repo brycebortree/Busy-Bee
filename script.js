@@ -67,22 +67,9 @@ $(document).ready(function(){
     {desc: 'Wormwood', photo: 'images/n-wormwood.jpg', correct: true}];
 
   $('.fader').on('click', function(){
-<<<<<<< HEAD
-    $('.fader').fadeOut();
-    $( "#images-row" ).show();
-    $( ".scoreBox" ).show();
-  });
-
-  $('#startBenedict').on('click', function(){
-    console.log("game started");
-    $('#benInst').show();
-    falseArr=blImages;
-    trueArr=bcImages;
-=======
     $(this).parent().hide();
     $('#images-row').fadeIn("slow");
     $('.scoreBox').fadeIn("slow");
-
   });
 
 
@@ -91,22 +78,13 @@ $(document).ready(function(){
   $('#startBee').on('click', function(){
     falseArr=yBees;
     trueArr=nBees;
->>>>>>> scoreboard
     generateBoard();
     dispImages=[];
   });
 
-<<<<<<< HEAD
-  $('#startBee').on('click', function(){
-    console.log("game started");
-    $('#beeInst').show();
-    falseArr=yBees;
-    trueArr=nBees;
-=======
   $('#startBenedict').on('click', function(){
     falseArr=blImages;
     trueArr=bcImages;
->>>>>>> scoreboard
     generateBoard();
     dispImages=[];
   });
@@ -140,22 +118,15 @@ var GenerateBoard = function(num){
     var opt3 = $('#opt3');
     roundCount++;
     var shuffledY = shuffle(falseArr);
-<<<<<<< HEAD
     console.log(shuffledY);
-=======
->>>>>>> scoreboard
     dispImages.push(falseArr[0]);
     dispImages.push(falseArr[1]);
     var shuffledN = shuffle(trueArr);
     dispImages.push(trueArr[0]);
-<<<<<<< HEAD
     // trueArr.pop();
     console.log(shuffledN);
     shuffle(dispImages);
     console.log(dispImages);
-=======
-    shuffle(dispImages);
->>>>>>> scoreboard
     opt1.css({'background-image':'url('+dispImages[0].photo+')'});
     opt1.removeClass('true false').addClass(''+dispImages[0].correct+'');
     opt1Words=document.getElementById("opt1-desc");
@@ -258,16 +229,9 @@ var GenerateBoard = function(num){
 //local storage for high score
 //^endless play?
 
-<<<<<<< HEAD
-//optional learn more page that I want so bad :( tbc
-// $('#learn').on('click', function(){
-//   console.log('learn more');
-// });
 
-=======
 // //GENERATE BIG function
 // var GenerateBig = function() {}
->>>>>>> scoreboard
 
 });
 
