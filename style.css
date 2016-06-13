@@ -17,6 +17,14 @@ button {
   margin-top: 100px;
 }
 
+.busybee {
+  background-color: gold;
+}
+
+.brycehates {
+  background-color: salmon;
+}
+
 .script-font, 
 #scoreDisp, 
 #opt1-desc, 
