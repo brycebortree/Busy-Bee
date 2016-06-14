@@ -222,7 +222,6 @@ var GenerateBoard = function(num){
         confirmButtonClass: 'btn-warning',
         confirmButtonText: "<button type='" + btn + "' id='restart'>Restart game?</button>"
         });
-      };
     } else if (score2 >= 5) {
         resetBoard();
         swal({
@@ -233,7 +232,6 @@ var GenerateBoard = function(num){
           confirmButtonText: "<button type='" + btn + "' id='restart'>Restart game?</button>"
         });
       resetBoard();
-      };
     } else {
         return;
     }
