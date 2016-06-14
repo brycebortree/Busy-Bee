@@ -2,6 +2,19 @@ $(document).ready(function(){
   console.log('locked/loaded');
   $('.initHide').hide();
 
+  //  function resetBoard() {
+  //   console.log("FUNCTION CALLED");
+  //   var roundCount = 0;
+  //   var dispImages = [];
+  //   var score1 = 0;
+  //   var score2 = 0;
+  //   dispScore1=document.getElementById("p1score");
+  //   dispScore1.innerHTML="Player One: " + 0;
+  //   dispScore2=document.getElementById("p2score");
+  //   dispScore2.innerHTML="Player Two: " + 0;
+  // }
+
+
   var roundCount = 0;
   var dispImages = [];
   var score1 = 0;
@@ -154,9 +167,9 @@ var GenerateBoard = function(num){
 
   $('.response').on('click', function(e){
     e.preventDefault();
-    console.log('clicked image');
+    // console.log('clicked image');
     if ($(this).hasClass('true')){
-    console.log('clicked correct image');
+    // console.log('clicked correct image');
       if(roundCount % 2 === 1) {
         score1++;
         dispScore1.innerHTML="Player One: " + score1;
@@ -179,8 +192,11 @@ var GenerateBoard = function(num){
           type: 'success',
           confirmButtonClass: 'btn-success'
         });
+        // checks for winner
         winner();
+        // clears array
         dispImages = [];
+        // creates new board
         generateBoard();
       }
     } 
@@ -198,36 +214,35 @@ var GenerateBoard = function(num){
   //separate winner function
   var winner = function(){
     if (score1 >= 5) {
+      resetBoard();
        swal({
         title: 'Winner!', 
         text: 'Congratulations, Player 1, you know your stuff!', 
         type: 'success',
-        confirmButtonClass: 'btn-success'
-      });
-       // resetBoard();
+        confirmButtonClass: 'btn-warning',
+        confirmButtonText: "<button type='" + btn + "' id='restart'>Restart game?</button>"
+        });
+      };
     } else if (score2 >= 5) {
+        resetBoard();
         swal({
           title: 'Winner!', 
           text: 'Congratulations, Player 2, you know your stuff!', 
           type: 'success',
-          confirmButtonClass: 'btn-success'
-      }); 
-        // resetBoard();  
+          confirmButtonClass: 'btn-warning',
+          confirmButtonText: "<button type='" + btn + "' id='restart'>Restart game?</button>"
+        });
+      resetBoard();
+      };
     } else {
         return;
     }
   }
 
-  var resetBoard = function() {
-    var roundCount = 0;
-    var dispImages = [];
-    var score1 = 0;
-    var score2 = 0;
-    dispScore1=document.getElementById("p1score");
-    dispScore1.innerHTML="Player One: " + 0;
-    dispScore2=document.getElementById("p2score");
-    dispScore2.innerHTML="Player Two: " + 0;
-  }
+
+  $('#restart').on('click', function(){
+    resetBoard();
+  });
 
 //local storage for high score
 //^endless play?
