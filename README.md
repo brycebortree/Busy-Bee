@@ -1,5 +1,7 @@
 <h1>Busy Bee</h1>
 <h2>A Javascript, HTML & CSS game to learn plants bees don't like</h2>
+
+<img src="/images/BusyBee.png" />
  
 <h2>Technology used</h2>
 <p>This short trivia game was built with HTMl, CSS, JQuery, and Bootstrap. I used mainly JQuery to manipulate how elements appear on the page. Start with buttons visible, then have the buttons disappear while the board shuffles and generates. I also used Bootstrap to make the page responsive down to cell phones.</p>
